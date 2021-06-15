@@ -12,16 +12,9 @@ export class Model<T extends IHasId> {
     ) {}
 
     //Passthrought methods
-    get on() {
-        return this.events.on; //return reference to this.events.on method
-    }
-
-    get trigger() {
-        return this.events.trigger; //return reference to this.events.trigger method
-    }
-    get get() {
-        return this.attributes.get; //return reference to this.attributes.get method
-    }
+    on = this.events.on; //direct reference to method can be used only if we don't pass any arguments
+    trigger = this.events.trigger;
+    get = this.attributes.get;
 
     //Set data while triggered
     set(update: T): void {
