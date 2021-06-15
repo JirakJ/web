@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "just new name",
+      "age": 99
+    },
+    {
+      "events": {
+        "events": {}
+      },
+      "sync": {
+        "rootUrl": "http://localhost:3000/users"
+      },
+      "attributes": {
+        "data": {
+          "id": 1,
+          "name": "just new name",
+          "age": 99
+        }
+      },
+      "id": 2
+    }
+  ]
+}
