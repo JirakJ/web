@@ -31,7 +31,8 @@ export class Model<T extends IHasId> {
 
         this.sync.fetch(id).then((response:AxiosResponse): void => {
             this.set(response.data);
-        }).catch(():void => {
+        }).catch((e: Error):void => {
+            console.error(e);
             this.trigger('error')
         });
     }
@@ -39,7 +40,8 @@ export class Model<T extends IHasId> {
     save(): void {
         this.sync.save(this.attributes.getAll()).then((response: AxiosResponse):void => {
             this.trigger('save')
-        }).catch(():void => {
+        }).catch((e: Error):void => {
+            console.error(e);
             this.trigger('error')
         });
     }
